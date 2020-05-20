@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/thirtyDp"
+    android:layout_marginTop="@dimen/thirtyDp"
+    android:layout_marginEnd="@dimen/thirtyDp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/spokenTextItemTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/sixteenSp" />
+
+    <ImageButton
+        android:id="@+id/spokenTextRemoveIB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="@null"
+        android:visibility="gone"
+        android:contentDescription="@string/cancelBtnTxt"
+        android:src="@drawable/ic_cancel"
+        android:textSize="@dimen/sixteenSp" />
+
+</LinearLayout>

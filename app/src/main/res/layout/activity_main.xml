@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/textLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/hundredDp">
+
+        <TextView
+            android:id="@+id/spokenTextTV"
+            android:layout_width="320dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:background="@drawable/rectangular_background"
+            android:gravity="center"
+            android:maxLength="20"
+            android:textSize="@dimen/sixteenSp" />
+
+        <ImageView
+            android:id="@+id/searchIV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/tenDp"
+            android:background="@null"
+            android:src="@drawable/ic_search_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/spokenTextRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/recordStatusTV"
+        android:layout_below="@id/textLayout"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/recordStatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/recordBtn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/startToRecordTxt"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/eighteenSp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/recordBtn"
+        android:layout_width="@dimen/fiftyDp"
+        android:layout_height="@dimen/fiftyDp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/twentyDp"
+        android:layout_marginBottom="@dimen/fiftyDp"
+        android:background="@drawable/ic_mic_on" />
+
+</RelativeLayout>
