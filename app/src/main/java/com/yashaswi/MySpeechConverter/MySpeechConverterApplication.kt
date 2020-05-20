@@ -5,7 +5,7 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 
 
-open class IntelliMindApplication : Application() {
+open class MySpeechConverterApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Realm.init(this)
