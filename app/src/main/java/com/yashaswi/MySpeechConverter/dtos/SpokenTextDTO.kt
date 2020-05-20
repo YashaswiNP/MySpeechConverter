@@ -4,7 +4,7 @@ import io.realm.RealmObject
 import io.realm.annotations.Required
 
 
-open class SpokenTextModel : RealmObject() {
+open class SpokenTextDTO : RealmObject() {
 
     @Required
     var id: Int? = null
