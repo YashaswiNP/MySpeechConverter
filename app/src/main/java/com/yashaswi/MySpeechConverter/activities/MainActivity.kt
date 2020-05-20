@@ -122,6 +122,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    /**
+     * starts the voice recorder
+     */
     private fun stopRecording() {
         audioBtnState = Constants.START
         recordStatusTV.text = resources.getString(R.string.startToRecordTxt)
@@ -129,6 +132,9 @@ class MainActivity : AppCompatActivity() {
         mVoiceRecorder.stop()
     }
 
+    /**
+     * Stops the voice recorder
+     */
     private fun startRecording() {
         audioBtnState = Constants.STOP
         recordStatusTV.text = resources.getString(R.string.stopRecordTxt)
