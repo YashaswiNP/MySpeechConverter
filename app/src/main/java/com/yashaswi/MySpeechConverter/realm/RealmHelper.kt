@@ -1,7 +1,7 @@
 package com.yashaswi.MySpeechConverter.realm
 
 import android.util.Log
-import com.yashaswi.MySpeechConverter.dtos.SpokenTextModel
+import com.yashaswi.MySpeechConverter.dtos.SpokenTextDTO
 import io.realm.Realm
 import io.realm.RealmResults
 import io.realm.exceptions.RealmPrimaryKeyConstraintException
@@ -11,7 +11,7 @@ import java.util.*
 class RealmHelper(private var realm: Realm) {
 
     //WRITE
-    fun save(spokenText: SpokenTextModel) {
+    fun save(spokenText: SpokenTextDTO) {
         try {
             realm.executeTransaction { realm.copyToRealm(spokenText) }
         } catch (e: RealmPrimaryKeyConstraintException) {
@@ -23,9 +23,9 @@ class RealmHelper(private var realm: Realm) {
     fun retrieve(): ArrayList<String> {
         val spokenTexts =
             ArrayList<String>()
-        val spacecrafts: RealmResults<SpokenTextModel> =
+        val spacecrafts: RealmResults<SpokenTextDTO> =
             realm.where(
-                SpokenTextModel::class.java
+                SpokenTextDTO::class.java
             ).findAll()
         for (s in spacecrafts) {
             spokenTexts.add(s.spokenText.toString())
@@ -34,11 +34,11 @@ class RealmHelper(private var realm: Realm) {
     }
 
     //WRITE
-    fun delete(spokenText: SpokenTextModel) {
+    fun delete(spokenText: SpokenTextDTO) {
         try {
             realm.executeTransaction {
-                val realmResult: RealmResults<SpokenTextModel> = realm.where(
-                    SpokenTextModel::class.java
+                val realmResult: RealmResults<SpokenTextDTO> = realm.where(
+                    SpokenTextDTO::class.java
                 )
                     .equalTo("skills.skillName", spokenText.id).findAll()
                 realmResult.deleteAllFromRealm()

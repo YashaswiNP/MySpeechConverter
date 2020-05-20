@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yashaswi.MySpeechConverter.*
-import com.yashaswi.MySpeechConverter.dtos.SpokenTextModel
+import com.yashaswi.MySpeechConverter.dtos.SpokenTextDTO
 import com.yashaswi.MySpeechConverter.googlespeech.SpeechService
 import com.yashaswi.MySpeechConverter.googlespeech.VoiceRecorder
 import com.yashaswi.MySpeechConverter.realm.RealmHelper
@@ -239,7 +239,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun addResult(result: String) {
-            val spokenTexts = SpokenTextModel()
+            val spokenTexts = SpokenTextDTO()
             spokenTexts.id = System.currentTimeMillis().toInt()
             spokenTexts.spokenText = result
             RealmHelper(Realm.getDefaultInstance())

@@ -5,7 +5,7 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 
 
-open class IntelliMindApplication : Application() {
+open class MySpeechConverterApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Realm.init(this)
@@ -15,7 +15,7 @@ open class IntelliMindApplication : Application() {
 
     private fun configureRealmDb() {
         val realmConfig = RealmConfiguration.Builder()
-            .name("intellimind.realm")
+            .name("myspeechconverter.realm")
             .schemaVersion(1)
             .deleteRealmIfMigrationNeeded()
             .build()
