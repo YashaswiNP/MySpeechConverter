@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.yashaswi.intellimindapp", appContext.packageName)
+        assertEquals("com.yashaswi.myspeechconverter", appContext.packageName)
     }
 }

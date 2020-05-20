@@ -15,7 +15,7 @@ open class MySpeechConverterApplication : Application() {
 
     private fun configureRealmDb() {
         val realmConfig = RealmConfiguration.Builder()
-            .name("intellimind.realm")
+            .name("myspeechconverter.realm")
             .schemaVersion(1)
             .deleteRealmIfMigrationNeeded()
             .build()
